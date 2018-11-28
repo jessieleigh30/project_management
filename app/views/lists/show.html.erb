@@ -1,6 +1,9 @@
 <h1><%= @list.name %> List</h1>
 
-<%= link_to "Delete List", board_list_path(@board, @list), method: :delete %>
-<%= link_to "Edit List", edit_board_list_path(@board) %>
+<%= link_to "Add Task", new_list_task_path(@list) %>
+
+<%= link_to "Delete List", board_list_path(@board, @list), method: :delete, class:"btn blue" %>
+<%= link_to "Edit List", edit_board_list_path(@board), class:"btn green" %>
+<%= link_to "Back", root_path, class:"btn purple" %>
 
 

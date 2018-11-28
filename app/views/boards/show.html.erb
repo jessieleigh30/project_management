@@ -8,7 +8,10 @@
 <% end %>
 </ul>
   <%= link_to "Add List", new_board_list_path(@board), class:"btn orange" %>
-  <%= link_to "Back", root_path %>
-  <br />
+  
+  <%= link_to "Back", root_path, class:"btn purple" %>
+
   <%= link_to "Delete Board", board_path, method: :delete, class:"btn blue" %>
-  <%= link_to "Edit Board", edit_board_path(@board) %>
+  
+  <%= link_to "Edit Board", edit_board_path(@board), class: "btn blue" %>
+
