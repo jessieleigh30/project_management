@@ -1,2 +1,10 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<h1><%= @board.name %> Lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.name, list %>
+     </li>
+<% end %>
+</ul>
+  <%= link_to "Add List", new_board_list_path(@board) %>
