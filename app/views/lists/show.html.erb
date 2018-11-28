@@ -1,2 +1,6 @@
-<h1>List#show</h1>
-<p>Find me in app/views/list/show.html.erb</p>
+<h1><%= @list.name %> List</h1>
+
+<%= link_to "Delete List", board_list_path(@board, @list), method: :delete %>
+<%= link_to "Edit List", edit_board_list_path(@board) %>
+
+
