@@ -3,10 +3,12 @@
 <ul>
   <% @lists.each do |list| %>
     <li>
-      <%= link_to list.name, list %>
+      <%= link_to list.name, board_list_path(@board,list) %>
      </li>
 <% end %>
 </ul>
-  <%= button_to "Add List", new_board_list_path(@board) %>
-  <%= link_to "Delete Board", board_path(@board), method: :delete %>
+  <%= link_to "Add List", new_board_list_path(@board) %>
+  <%= link_to "Back", root_path %>
+  <br />
+  <%= link_to "Delete Board", board_path, method: :delete %>
   <%= link_to "Edit Board", edit_board_path(@board) %>

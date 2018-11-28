@@ -3,7 +3,6 @@ class BoardsController < ApplicationController
   
   def index
     @boards = Board.all_boards(current_user.id)
-    
   end
 
   def show
@@ -40,12 +39,13 @@ class BoardsController < ApplicationController
 
   private
 
+  
+  def set_board
+    @board = current_user.boards.find(params[:id])
+  end
+  
   def board_params
     params.require(:board).permit(:name)
   end
-
-def set_board
-  @board = current_user.boards.find(params[:id])
-end
 
 end
