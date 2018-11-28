@@ -7,4 +7,6 @@
      </li>
 <% end %>
 </ul>
-  <%= link_to "Add List", new_board_list_path(@board) %>
+  <%= button_to "Add List", new_board_list_path(@board) %>
+  <%= link_to "Delete Board", board_path(@board), method: :delete %>
+  <%= link_to "Edit Board", edit_board_path(@board) %>

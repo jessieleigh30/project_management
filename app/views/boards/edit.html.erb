@@ -1,2 +1,9 @@
-<h1>Boards#edit</h1>
-<p>Find me in app/views/boards/edit.html.erb</p>
+<h1>Edit Board Name</h1>
+
+<%= form_with(model: @board, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,3 +1,4 @@
+<div class="board_container">
 <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
 <h2><%= current_user.first_name %>'s Boards</h2>
 
@@ -11,3 +12,5 @@
     </li>
   <% end %>
 </ul>
+
+</div>

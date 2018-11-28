@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update]
+  before_action :set_board, only: [:show, :edit, :update, :destroy]
   
   def index
     @boards = Board.all_boards(current_user.id)
@@ -26,6 +26,11 @@ class BoardsController < ApplicationController
   end
 
   def update
+      if @board.update(board_params)
+        redirect_to @board
+      else
+        render :edit
+    end
   end
 
   def destroy

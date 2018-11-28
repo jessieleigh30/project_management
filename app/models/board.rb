@@ -14,6 +14,6 @@ class Board < ApplicationRecord
     Board.find_by_sql(["
       DELETE FROM boards AS b
       WHERE b.id = ?
-    ;", user_id])
+    ;", board_id])
   end
 end
