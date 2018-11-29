@@ -7,6 +7,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @tasks = @list.tasks.all
   end
 
   def new

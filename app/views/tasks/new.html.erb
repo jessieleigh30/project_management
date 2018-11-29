@@ -1,2 +1,11 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>Add New Tasks</h1>
+
+<%= form_with(model: [@list, @task], local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date, required: true, placeholder: "Due Date" %>
+  <%= f.submit %>
+<% end %>
